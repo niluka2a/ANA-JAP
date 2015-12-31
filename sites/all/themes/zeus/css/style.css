@@ -4,6 +4,10 @@
 body{
     color: #666;
 }
+h2, .h2 {
+    font-size: 13px;
+    font-weight: bold;
+}
 .submitted{
     display: none;
 }
@@ -319,4 +323,22 @@ By made*/
 .view-id-by_made .views-field.views-field-php{
     float: left;
     width: 20%;
+}
+
+/*
+Carousel*/
+.view-front-image-carousel{
+
+}
+.view-front-image-carousel .owl-wrapper-outer{
+    border: 3px solid #D5E8D5
+}
+.view-front-image-carousel .owl-item{
+    padding: 10px;
+}
+.view-front-image-carousel .owl-item .views-field-title{
+    height: 50px;
+}
+.view-front-image-carousel .owl-item .views-field-field-images img{
+    width: 100% !important;
 }
