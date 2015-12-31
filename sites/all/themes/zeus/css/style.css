@@ -1,0 +1,322 @@
+/**
+ * Place your custom styles here.
+ */
+body{
+    color: #666;
+}
+.submitted{
+    display: none;
+}
+
+#views-exposed-form-stock-page{
+    padding: 10px;
+    margin-bottom: 30px;
+    border: 3px solid #D5E8D5;
+    background: #D5E8D5;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+#views-exposed-form-stock-page #edit-mileage-wrapper .form-item-mileage-min label.control-label{
+    display: none;
+}
+#views-exposed-form-stock-page #edit-mileage-wrapper .form-item-mileage-max label.control-label{
+    width: 12%;
+    float: left;
+    padding: 7px 2px;
+    background: #ccc;
+}
+#views-exposed-form-stock-page #edit-mileage-wrapper .form-item-mileage-max #edit-mileage-max,
+#views-exposed-form-stock-page #edit-mileage-wrapper .form-item-mileage-min{
+    float: left;
+    width: 44%;
+}
+#edit-brand-select-1,
+#edit-brand-select-2{
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    color: #555;
+    display: block;
+    font-size: 14px;
+    height: 34px;
+    line-height: 1.42857;
+    padding: 6px 12px;
+    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+    /*width: 50%;*/
+}
+#edit-brand-select-2{
+    display: none;
+}
+#views-exposed-form-stock-page .views-exposed-widget.views-widget-button.views-submit-button{
+    clear: both;
+}
+#views-exposed-form-stock-page .description{
+    font-size: 10px;
+}
+#views-exposed-form-stock-page .center-wrapper{
+    clear: both;
+}
+
+.view-id-stock .views-row{
+    margin: 0px 0px 30px 0px;
+}
+
+.view-id-stock .views-row .title.views-fieldset{
+    padding: 10px;
+    background: #D5E8D5;
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.view-id-stock .views-row .title.views-fieldset a,
+.view-id-stock .views-row .title.views-fieldset a:hover{
+    color: inherit;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.view-id-stock .views-row .main-wrapper.views-fieldset{
+    padding: 10px;
+    border: 3px solid #D5E8D5;
+    -webkit-border-bottom-right-radius: 5px;
+    -webkit-border-bottom-left-radius: 5px;
+    -moz-border-radius-bottomright: 5px;
+    -moz-border-radius-bottomleft: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.view-id-stock .views-row .main-wrapper.views-fieldset:hover{
+    background: #F9FBF9;
+}
+
+.view-id-stock .views-row .main-wrapper.views-fieldset .image.views-fieldset{
+    width: 30%;
+    float: left;
+}
+.view-id-stock .views-row .main-wrapper.views-fieldset .content.views-fieldset{
+    width: 50%;
+    float: left;
+    padding: 0px 10px;
+    border-right: 1px solid #E0E0E0;
+}
+.view-id-stock .views-row .main-wrapper.views-fieldset .content.views-fieldset .views-field-field-brand .field-content ul{
+    padding: 0px;
+    margin: 0px;
+}
+.view-id-stock .views-row .main-wrapper.views-fieldset .content.views-fieldset .views-field-field-brand .field-content ul li{
+    display: inline;
+    list-style: none;
+}
+
+.view-id-stock .views-row .price.views-fieldset{
+    width: 20%;
+    float: left;
+    text-align: center;
+}
+.view-id-stock .views-row .price.views-fieldset .views-field-field-retail-price .field-content{
+    font-size: 30px;
+    display: block;
+}
+.view-id-stock .views-row .price.views-fieldset .views-field-field-retail-price .aa-user-login-message{
+    font-size: 12px;
+    margin-top: 15px;
+}
+
+.view-id-stock .views-row .main-wrapper.views-fieldset .views-label{
+    font-weight: bold;
+}
+.view-id-stock .views-row .main-wrapper.views-fieldset .field-content{
+    display: inline-block;
+}
+
+.view-id-stock .views-row .inquiry.views-fieldset{
+    text-align: right;
+    margin-top: 8px;
+}
+.view-id-stock .views-row .inquiry.views-fieldset .aa-lable{
+    padding: 10px;
+    margin: 0px 0px 0px 5px;
+    border: 3px solid #D5E8D5;
+    background: #D5E8D5;
+    cursor: pointer;
+    -webkit-border-bottom-right-radius: 5px;
+    -webkit-border-bottom-left-radius: 5px;
+    -moz-border-radius-bottomright: 5px;
+    -moz-border-radius-bottomleft: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.view-id-stock .views-row .inquiry.views-fieldset .aa-lable a,
+.view-id-stock .views-row .inquiry.views-fieldset .aa-lable a:hover{
+    color: inherit;
+    text-decoration: none;
+}
+
+/*
+Mini panel*/
+#block-panels-mini-vehicle-info-page .panel-2col .panel-col-first{
+    width: 70%;
+}
+#block-panels-mini-vehicle-info-page .panel-2col .panel-col-last{
+    width: 30%;
+}
+
+/*Vehicle info block*/
+.view-vehicle-page-block.view-display-id-block .views-row .views-field:nth-child(even){
+    background-color: #EBF1F1;
+    padding: 10px;
+    border-bottom: 1px solid #E4E3E3;
+}
+.view-vehicle-page-block.view-display-id-block .views-row .views-field:nth-child(odd){
+    background-color: #fff;
+    padding: 10px;
+    border-bottom: 1px solid #E4E3E3;
+}
+.view-vehicle-page-block.view-display-id-block .views-row .views-field:hover{
+    cursor: pointer;
+    background-color: #EAF5F7;
+}
+.view-vehicle-page-block.view-display-id-block .views-row .views-field .views-label{
+    font-weight: bold;
+    display: inline-block;
+    width: 25%;
+    vertical-align: top;
+}
+.view-vehicle-page-block.view-display-id-block .views-row .views-field .field-content{
+    display: inline-block;
+}
+.view-vehicle-page-block.view-display-id-block .views-row .views-field .field-content ul,
+.view-vehicle-page-block.view-display-id-block .views-row .views-field .field-content ul li{
+    margin: 0px;
+    padding: 0px;
+}
+.view-vehicle-page-block.view-display-id-block .views-row .views-field .field-content ul li{
+    list-style: inside;
+}
+.view-vehicle-page-block.view-display-id-block .views-row .views-field-field-retail-price .field-content{
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.view-vehicle-page-block.view-display-id-block_1 .views-row .views-field-field-retail-price{
+    text-align: center;
+    padding: 10px;
+}
+.view-vehicle-page-block.view-display-id-block_1 .views-row .views-field-field-retail-price .ana-price-label{
+    font-weight: bold;
+}
+.view-vehicle-page-block.view-display-id-block_1 .views-row .views-field-field-retail-price .ana-price-value{
+    font-size: 25px;
+}
+
+#customer-info{
+    display: none;
+    margin-bottom: 20px;
+}
+
+/*#div-request-car*/
+#div-request-car{
+    margin: 20px 0px 0px 0px;
+}
+#div-request-car .form-header-wrapper{
+    margin: 0px 0px 0px 0px;
+    background-color: #337ab7;
+    color: #fff;
+    padding: 10px;
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+#div-request-car .form-header-wrapper ul,
+#div-request-car .form-header-wrapper li{
+
+}
+#div-request-car form.form-request-car{
+    padding: 20px;
+    background-color: #E4E8EA;
+    -webkit-border-bottom-right-radius: 5px;
+    -webkit-border-bottom-left-radius: 5px;
+    -moz-border-radius-bottomright: 5px;
+    -moz-border-radius-bottomleft: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+#div-request-car form.form-request-car label.col-md-2{
+    margin: 0px !important;
+    padding: 0px;
+}
+
+/*
+Header contact block*/
+#block-panels-mini-panel-header{
+    margin: 15px 0px 0px 0px;
+}
+.panel-3col-33-stacked .panel-col{
+    /*width: 20%;*/
+}
+.view-id-header_block_contact{
+
+}
+.view-id-header_block_contact .views-field-field-contact-lable,
+.view-id-header_block_contact .views-field-field-contact-value{
+    float: left;
+}
+.view-id-header_block_contact .views-field-field-contact-lable{
+    width: 20%;
+    font-weight: bold;
+}
+.view-id-header_block_contact .views-field-field-contact-value{
+    width: 80%;
+}
+.panel-separator{
+    clear: both;
+}
+.panel-pane.pane-custom.pane-1{
+    clear: both;
+    margin: 10px 0px;
+}
+.panel-pane.pane-custom.pane-3 .header-block-login a,
+.panel-pane.pane-custom.pane-3 .header-block-login a:hover{
+    color: inherit !important;
+    text-decoration: none;
+}
+
+/*
+Menu*/
+.view-id-front_page_menu{
+    margin: 0px 0px 20px 0px;
+    display: inline-block;
+    width: 100%;
+}
+.view-id-front_page_menu .views-row{
+    float: left;
+    width: 25%;
+    text-align: center;
+    padding: 10px;
+}
+.view-id-front_page_menu .views-row .views-field{
+    background-color: #F1F1F1;
+    padding: 60px;
+}
+.view-id-front_page_menu .views-row .views-field img{
+    display: initial;
+}
+
+/*
+By made*/
+#block-system-powered-by{
+    display: none;
+}
+.view-id-by_made .views-field.views-field-php{
+    float: left;
+    width: 20%;
+}

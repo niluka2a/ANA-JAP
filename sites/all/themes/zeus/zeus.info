@@ -1,0 +1,43 @@
+name = Bootstrap Sub-Theme (ZEUS)
+description = Uses the jsDelivr CDN for all CSS and JavaScript. No source files or compiling is necessary and is recommended for simple sites or beginners.
+core = 7.x
+base theme = bootstrap
+
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Regions
+;;;;;;;;;;;;;;;;;;;;;
+
+regions[navigation]     = 'Navigation'
+regions[header]         = 'Top Bar'
+regions[highlighted]    = 'Highlighted'
+regions[help]           = 'Help'
+regions[content]        = 'Content'
+regions[sidebar_first]  = 'Primary'
+regions[sidebar_second] = 'Secondary'
+regions[footer]         = 'Footer'
+regions[page_top]       = 'Page top'
+regions[page_bottom]    = 'Page bottom'
+
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Stylesheets
+;;;;;;;;;;;;;;;;;;;;;
+stylesheets[all][] = css/style.css
+
+
+;;;;;;;;;;;;;;;;;;;;;
+;; fancybox
+;;;;;;;;;;;;;;;;;;;;;
+; Add mousewheel plugin (this is optional)
+scripts[] = vendor/fancybox/lib/jquery.mousewheel-3.0.6.pack.js
+; Add fancyBox
+stylesheets[all][] = vendor/fancybox/source/jquery.fancybox.css
+scripts[] = vendor/fancybox/source/jquery.fancybox.pack.js
+; Optionally add helpers - button, thumbnail and/or media
+stylesheets[all][] = vendor/fancybox/source/helpers/jquery.fancybox-buttons.css
+scripts[] = vendor/fancybox/source/helpers/jquery.fancybox-buttons.js
+scripts[] = vendor/fancybox/source/helpers/jquery.fancybox-media.js
+
+stylesheets[all][] = vendor/fancybox/source/helpers/jquery.fancybox-thumbs.css
+scripts[] = vendor/fancybox/source/helpers/jquery.fancybox-thumbs.js

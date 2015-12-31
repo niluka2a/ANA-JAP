@@ -1,0 +1,40 @@
+#block-shipping-widget-shipping-widget{
+    padding: 10px;
+    border: 3px solid #D5E8D5;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+#block-shipping-widget-shipping-widget .shipping-widget-wrapper h4{
+    text-align: center;
+}
+#block-shipping-widget-shipping-widget .shipping-widget-wrapper .shipping-select-box{
+    margin: 5px 0px;
+}
+#block-shipping-widget-shipping-widget .shipping-widget-wrapper .views-widget-edit-insurance-inspection{
+    margin: 10px 0px;
+}
+#block-shipping-widget-shipping-widget .shipping-widget-wrapper .shipping-form-calculate-btn{
+    padding: 0px 15px;
+}
+#block-shipping-widget-shipping-widget .shipping-widget-wrapper .shipping-form-calculate-btn.shipping-inquiry{
+    margin-bottom: 15px;
+}
+#block-shipping-widget-shipping-widget .shipping-widget-wrapper .shipping-form-calculate-btn button.btn{
+    width: 100%;
+}
+#block-shipping-widget-shipping-widget .shipping-widget-wrapper #shipping-total-price{
+    margin: 10px 0px;
+    font-size: 20px;
+    color: #419641;
+    border: 2px solid #D9ECD9;
+    padding: 10px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+#block-shipping-widget-shipping-widget .shipping-widget-wrapper .shipping-customer-message{
+    margin: 10px;
+    text-align: center;
+    color: #CE2C2C;
+}

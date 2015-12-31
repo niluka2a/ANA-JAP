@@ -1,0 +1,6 @@
+name = Image gallery
+description = Vehicle image gallery.
+package = Shipping
+core = 7.x
+
+stylesheets[all][] = image_gallery.css

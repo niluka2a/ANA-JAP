@@ -1,0 +1,140 @@
+<?php
+
+/**
+ * Implements hook_block_info().
+ */
+function shipping_widget_block_info() {
+    $blocks = array();
+    $blocks['shipping_widget'] = array(
+        'info' => t('Shipping Widget'),
+    );
+    return $blocks;
+}
+
+/**
+ * Implements hook_block_view().
+ */
+function shipping_widget_block_view($delta = '') {
+    $block = array();
+    switch($delta) {
+        case 'shipping_widget' :
+            drupal_add_js(drupal_get_path('module', 'shipping_widget') .'/shipping_widget.js', array('type' => 'file', 'scope' => 'footer'));
+            $block['content'] = _shipping_widget();
+            break;
+    }
+    return $block;
+}
+
+/**
+ * Implements hook_theme().
+ */
+
+function shipping_widget_theme($existing, $type, $theme, $path)
+{
+    return array(
+        'shipping_block_theme' => array(
+            'path' => drupal_get_path('module', 'shipping_widget') . '/templates',
+            'template' => 'shipping_block_theme',
+            'variables' => array('item' => NULL),
+        ),
+    );
+}
+
+/**
+ * Implements _shipping_widget().
+ */
+function _shipping_widget(){
+    $vocabularies = taxonomy_vocabulary_machine_name_load('country');
+    $countries    = taxonomy_get_tree($vocabularies->vid, $parent = 0, $max_depth = NULL, $load_entities = FALSE);
+    return theme('shipping_block_theme', array('countries' => $countries));
+}
+
+/**
+ * Implements hook_menu().
+ */
+function shipping_widget_menu()
+{
+    $items['inquiry/fob'] = array(
+        'title' => '',
+        'page callback' => '_inquiry_fob_send_email',
+        'access arguments' => array('access content'),
+        'type' => MENU_CALLBACK,
+    );
+
+    $items['inquiry/request-vehicles'] = array(
+        'title' => '',
+        'page callback' => '_inquiry_request_vehicles_send_email',
+        'access arguments' => array('access content'),
+        'type' => MENU_CALLBACK,
+    );
+
+    return $items;
+}
+
+function _inquiry_fob_send_email(){
+    $country = taxonomy_term_load($_GET["country"]);
+    $fort    = taxonomy_term_load($_GET["fort"]);
+
+    $insurance = $_GET["insurance"];
+    $inspection = $_GET["inspection"];
+
+    $inputPrice = $_GET["inputPrice"];
+    $inputTotal = $_GET["inputTotal"];
+
+    $inputName = $_GET["inputName"];
+    $inputTelephone = $_GET["inputTelephone"];
+    $inputEmail = $_GET["inputEmail"];
+    $description = $_GET["info"];
+
+    $to      = 'niluka2a@gmail.com';
+    $subject = 'FOB';
+
+    $message  = '';
+    $message .= 'Country : ' . $country->name . "\r\n";
+    $message .= 'Fort : ' . $fort->name . "\r\n";
+    $message .= 'Insurance : ' . $insurance . "\r\n";
+    $message .= 'inspection : ' . $inspection . "\r\n";
+    $message .= 'Veh. Price : ' . $inputPrice . "\r\n";
+    $message .= 'Tot. Price : ' . $inputTotal . "\r\n";
+    $message .= 'Name : ' . $inputName . "\r\n";
+    $message .= 'Telephone : ' . $inputTelephone . "\r\n";
+    $message .= 'Email : ' . $inputEmail . "\r\n";
+    $message .= 'Info : ' . $description . "\r\n";
+
+    $headers = 'From: info@ana.com' . "\r\n" .
+        'Reply-To: info@ana.com' . "\r\n" .
+        'X-Mailer: PHP/' . phpversion();
+
+    mail($to, $subject, $message, $headers);
+}
+
+function _inquiry_request_vehicles_send_email(){
+
+    $inputStockNo = (isset($_GET["inputStockNo"]) && $_GET["inputStockNo"]) ? $_GET["inputStockNo"] : '-';
+    $inputMake = (isset($_GET["inputMake"]) && $_GET["inputMake"]) ? $_GET["inputMake"] : '-';
+    $inputModel = (isset($_GET["inputModel"]) && $_GET["inputModel"]) ? $_GET["inputModel"] : '-';
+    $inputTransmission = (isset($_GET["inputTransmission"]) && $_GET["inputTransmission"]) ? $_GET["inputTransmission"] : '-';
+    $inputName = $_GET["inputName"];
+    $inputTelephone = $_GET["inputTelephone"];
+    $inputEmail = $_GET["inputEmail"];
+    $description = $_GET["description"];
+
+    $to      = 'niluka2a@gmail.com';
+    $subject = 'Request vehicles';
+
+    $message  = '';
+    $message .= 'Stock No. : ' . $inputStockNo . "\r\n";
+    $message .= 'Make : ' . $inputMake . "\r\n";
+    $message .= 'Model : ' . $inputModel . "\r\n";
+    $message .= 'Transmission : ' . $inputTransmission . "\r\n";
+    $message .= 'Name : ' . $inputName . "\r\n";
+    $message .= 'Telephone : ' . $inputTelephone . "\r\n";
+    $message .= 'Email : ' . $inputEmail . "\r\n";
+    $message .= 'Info : ' . $description . "\r\n";
+
+    $headers = 'From: info@ana.com' . "\r\n" .
+        'Reply-To: info@ana.com' . "\r\n" .
+        'X-Mailer: PHP/' . phpversion();
+
+    mail($to, $subject, $message, $headers);
+}

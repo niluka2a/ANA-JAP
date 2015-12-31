@@ -1,0 +1,6 @@
+name = Views alter
+description = Views Pre-render functions
+package = Atraveo
+core = 7.x
+
+dependencies[] = views

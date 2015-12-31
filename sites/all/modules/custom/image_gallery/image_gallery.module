@@ -1,0 +1,52 @@
+<?php
+
+/**
+ * Implements hook_block_info().
+ */
+function image_gallery_block_info() {
+    $blocks = array();
+    $blocks['image_gallery'] = array(
+        'info' => t('Image gallery'),
+    );
+    return $blocks;
+}
+
+/**
+ * Implements hook_block_view().
+ */
+function image_gallery_block_view($delta = '') {
+    $block = array();
+    switch($delta) {
+        case 'image_gallery' :
+            drupal_add_js(drupal_get_path('module', 'image_gallery') .'/image_gallery.js', array('type' => 'file', 'scope' => 'footer'));
+            $block['content'] = _gallery_widget();
+            break;
+    }
+    return $block;
+}
+
+/**
+ * Implements hook_theme().
+ */
+
+function image_gallery_theme($existing, $type, $theme, $path)
+{
+    return array(
+        'image_gallery_block_theme' => array(
+            'path' => drupal_get_path('module', 'image_gallery') . '/templates',
+            'template' => 'image_gallery_theme',
+            'variables' => array('item' => NULL),
+        ),
+    );
+}
+
+/**
+ * Implements _shipping_widget().
+ */
+function _gallery_widget(){
+    $node = '';
+    if(arg(0) == 'node' && arg(1)){
+        $node = node_load(arg(1));
+    }
+    return theme('image_gallery_block_theme', array('node' => $node));
+}

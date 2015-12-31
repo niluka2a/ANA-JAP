@@ -1,0 +1,10 @@
+#car-image-gallery-wrapper{
+
+}
+#car-image-gallery-wrapper .image-gallery-item{
+    margin-bottom: 20px;
+}
+#car-image-gallery-wrapper .image-gallery-item img{
+    width: 100% !important;
+    cursor: pointer;
+}

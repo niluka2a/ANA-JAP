@@ -1,0 +1,6 @@
+name = Shipping widget
+description = Shipping widget.
+package = Shipping
+core = 7.x
+
+stylesheets[all][] = shipping_widget.css

@@ -1,0 +1,33 @@
+<?php
+
+/**
+ * Implements hook_views_pre_render().
+ */
+function views_alter_views_pre_render(&$view)
+{
+    if($view->name == 'stock'){
+        foreach($view->result as $r => $result) {
+            global $user;
+            global $base_url;
+            if (!$user->uid) {
+                $result->field_field_retail_price[0]['rendered']['#markup'] = '<div class="aa-user-login-message"><p><a href="'.$base_url.'/user">Please login to the site see prices and more details</a></p></div>';
+            }
+        }
+    }
+    return $view;
+}
+
+/**
+ * Implements hook_node_submit().
+ */
+function views_alter_node_submit($node, $form, &$form_state)
+{
+    if($node->type == 'vehicle'){
+        $brand    = $node->field_brand['und'][0]['tid'];
+        $brand    = taxonomy_term_load($brand);
+        $keyWords = $node->title . ' + ' . $node->field_engine_no['und'][0]['value'] . ' + ' .  $node->field_chassis_no['und'][0]['value'] . ' + ' . $brand->name;
+
+        $node->field_key_word_search['und'][0]['value'] = $keyWords;
+        node_save($node);
+    }
+}
